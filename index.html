@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#6c4bd2">
+  <title>Petualangan Kata! — Bahasa Indonesia Kelas IV</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><span class="brand-icon">📚</span><div><b>Petualangan Kata!</b><small>Bahasa Indonesia • Kelas IV</small></div></div>
+    <button class="ghost" id="teacherToggle">Mode Guru</button>
+  </header>
+
+  <main class="shell">
+    <section id="startScreen" class="panel hero">
+      <div class="hero-art" aria-hidden="true"><span>📝</span><span>🏡</span><span>🌱</span></div>
+      <p class="eyebrow">BAB II • DI BAWAH ATAP</p>
+      <h1>Siap menjelajah<br><em>dunia kata?</em></h1>
+      <p class="intro">Ayo uji pemahamanmu tentang kosakata, kaidah kebahasaan, isi cerita, dan ide pokok!</p>
+      <label for="studentName">Nama peserta didik</label>
+      <input id="studentName" maxlength="40" placeholder="Tulis namamu di sini">
+      <div class="info-pills"><span>20 Pilihan Ganda</span><span>5 Isian</span><span>25 Soal</span></div>
+      <button class="primary wide" id="startBtn">Mulai Petualangan <span>→</span></button>
+      <p class="tiny">Kerjakan dengan teliti. Baca setiap pertanyaan sampai selesai.</p>
+    </section>
+
+    <section id="quizScreen" class="panel hidden">
+      <div class="quiz-head"><div><p class="eyebrow" id="sectionLabel">PILIHAN GANDA</p><h2 id="questionCount">Soal 1 dari 25</h2></div><div class="score-chip">⭐ <span id="progressPercent">0%</span></div></div>
+      <div class="progress"><div id="progressBar"></div></div>
+      <div class="question-card">
+        <div class="q-meta"><span id="qType">PILIHAN GANDA</span><span id="qNumber">01</span></div>
+        <h3 id="questionText"></h3>
+        <div id="answers" class="answers"></div>
+        <div id="textAnswerWrap" class="hidden"><label for="textAnswer">Jawabanmu</label><input id="textAnswer" placeholder="Ketik jawaban di sini"></div>
+      </div>
+      <div class="quiz-actions"><button class="ghost" id="prevBtn">← Sebelumnya</button><button class="primary" id="nextBtn">Selanjutnya →</button></div>
+    </section>
+
+    <section id="resultScreen" class="panel hidden">
+      <div class="result-icon">🏆</div><p class="eyebrow">PETUALANGAN SELESAI</p>
+      <h1 id="resultTitle">Hebat!</h1><p id="resultMessage" class="intro"></p>
+      <div class="result-grid"><div><strong id="resultScore">0</strong><small>Nilai sementara</small></div><div><strong id="correctCount">0</strong><small>PG benar</small></div><div><strong id="reviewCount">5</strong><small>Isian perlu diperiksa</small></div></div>
+      <p class="notice">Nilai akhir dapat disesuaikan guru setelah memeriksa jawaban isian nomor 21–25.</p>
+      <button class="primary wide" id="reviewBtn">Lihat Pembahasan</button>
+      <button class="ghost wide" id="restartBtn">Ulangi Kuis</button>
+    </section>
+
+    <section id="reviewScreen" class="panel hidden">
+      <div class="quiz-head"><div><p class="eyebrow">HASIL PEKERJAAN</p><h2>Ulasan Jawaban</h2></div><button class="ghost" id="backResult">Tutup</button></div>
+      <div id="reviewList" class="review-list"></div>
+    </section>
+
+    <section id="teacherScreen" class="panel hidden">
+      <div class="quiz-head"><div><p class="eyebrow">DASHBOARD PENDIDIK</p><h2>Kisi-kisi & Kunci Jawaban</h2></div><button class="ghost" id="closeTeacher">Tutup</button></div>
+      <p class="intro small">Instrumen disusun berdasarkan materi Bab II “Di Bawah Atap” pada buku panduan guru Bahasa Indonesia kelas IV.</p>
+      <div class="teacher-stats"><span>25 soal</span><span>PG: 20 × 4 = 80</span><span>Isian: 5 × 4 = 20</span></div>
+      <h3>Kisi-kisi soal</h3>
+      <div class="table-wrap"><table><thead><tr><th>No.</th><th>Materi/Indikator</th><th>Bentuk</th><th>Nomor</th></tr></thead><tbody>
+        <tr><td>1</td><td>Memahami makna kosakata dalam konteks cerita</td><td>PG</td><td>1–3</td></tr>
+        <tr><td>2</td><td>Mengenali homonim dan perbedaan maknanya</td><td>PG</td><td>4–5</td></tr>
+        <tr><td>3</td><td>Mengenali kata kerja berawalan me-</td><td>PG</td><td>6–7</td></tr>
+        <tr><td>4</td><td>Mengidentifikasi unsur kalimat berpola SPOK</td><td>PG</td><td>8–10</td></tr>
+        <tr><td>5</td><td>Memahami konjungsi kalimat majemuk setara</td><td>PG</td><td>11–13</td></tr>
+        <tr><td>6</td><td>Memahami informasi dalam cerita “Kepala Suku Len” dan “Ada Vampir di Rumah Ini”</td><td>PG</td><td>14–17</td></tr>
+        <tr><td>7</td><td>Menentukan ide pokok teks/cerita</td><td>PG</td><td>18–20</td></tr>
+        <tr><td>8</td><td>Menjelaskan makna kosakata sesuai konteks</td><td>Isian</td><td>21</td></tr>
+        <tr><td>9</td><td>Menuliskan kata kerja berawalan me-</td><td>Isian</td><td>22</td></tr>
+        <tr><td>10</td><td>Mengidentifikasi unsur SPOK</td><td>Isian</td><td>23</td></tr>
+        <tr><td>11</td><td>Melengkapi kalimat majemuk dengan konjungsi</td><td>Isian</td><td>24</td></tr>
+        <tr><td>12</td><td>Menuliskan ide pokok cerita</td><td>Isian</td><td>25</td></tr>
+      </tbody></table></div>
+      <h3>Kunci jawaban pilihan ganda</h3><div id="answerKey" class="key-grid"></div>
+      <h3>Pedoman penskoran</h3>
+      <ul class="rubric"><li>Jawaban pilihan ganda benar: 4 poin; salah/kosong: 0 poin.</li><li>Jawaban isian: 0–4 poin berdasarkan ketepatan isi dan kesesuaian konteks.</li><li>Nilai akhir = (total skor perolehan ÷ 100) × 100.</li><li>Guru memeriksa jawaban isian secara manual. Sistem hanya menghitung skor pilihan ganda secara otomatis.</li></ul>
+      <button class="primary" id="downloadCsv">Unduh Rekap Jawaban CSV</button>
+    </section>
+  </main>
+  <footer>Belajar mandiri • Bertanggung jawab • Semangat membaca 🌟</footer>
+  <script src="script.js"></script>
+</body>
+</html>
